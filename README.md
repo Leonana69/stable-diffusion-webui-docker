@@ -4,3 +4,4 @@
 ```
 bash build_run.sh
 ```
+Then access `localhost:7861`.
