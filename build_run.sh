@@ -10,5 +10,6 @@ docker build -t sd-webui:0.1 .
 docker run -td --privileged --net=host --ipc=host \
     --gpus all \
     --name="sd-webui" \
+    -v ./models:/root/models \
     -e "DISPLAY=$DISPLAY" \
     sd-webui:0.1 \
