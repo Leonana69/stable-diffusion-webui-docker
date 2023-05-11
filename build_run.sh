@@ -10,6 +10,9 @@ docker build -t sd-webui:0.1 .
 docker run -td --privileged --net=host --ipc=host \
     --gpus all \
     --name="sd-webui" \
-    -v ./models:/root/models \
+    -v ./models:/root/stable-diffusion-webui/models/Stable-diffusion \
+    -v ./vae:/root/stable-diffusion-webui/models/VAE \
+    -v ./embeddings:/root/stable-diffusion-webui/embeddings/ \
+    -v ./lora:/root/stable-diffusion-webui/models/Lora \
     -e "DISPLAY=$DISPLAY" \
     sd-webui:0.1 \
