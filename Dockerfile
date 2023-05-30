@@ -12,4 +12,4 @@ COPY ./src /root/stable-diffusion-webui/
 
 RUN bash webui.sh
 EXPOSE 7861
-CMD ["python", "launch.py", "--port", "7861", "--listen"]
+CMD ["python", "launch.py", "--port", "7861", "--listen", "--theme", "light"]
